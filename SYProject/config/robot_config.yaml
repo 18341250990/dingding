@@ -1,4 +1,0 @@
-robot_headers:
-   Content-Type: application/json
-robot_url: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=9a8129c4-bc6a-45ab-9323-1bf9ff9a3fa8
-host_url: http://114.116.52.98:8182

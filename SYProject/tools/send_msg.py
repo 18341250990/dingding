@@ -104,12 +104,18 @@ class MSG:
         else:
             print('消息推送成功')
 
+    def get_new_report(self,path):
+       if os.path.isdir(path):
+           lists = os.listdir(path)  # 列出目录的下所有文件和文件夹保存到lists
+           lists.sort(key=lambda fn: os.path.getmtime(path + "\\" + fn))  # 按时间排序
+           file_new = os.path.join(path, lists[-1])  # 获取最新的文件保存到file_new
+           return file_new
+       else:
+           print('文件目录不正确，请重新输入')
+
 
 if __name__ == '__main__':
-    # msg = {'tip': '测试'}
-    # MSG().send(msg)
     m = MSG()
-
     url = m.host_url
     picUrl = f'{m.host_url}/log.png'
     m.send_new(title='测试报告', url=url, picUrl=picUrl)
