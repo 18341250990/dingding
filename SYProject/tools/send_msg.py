@@ -115,10 +115,7 @@ class MSG:
 
 
 if __name__ == '__main__':
-    # msg = {'tip': '测试'}
-    # MSG().send(msg)
     m = MSG()
-
     url = m.host_url
     picUrl = f'{m.host_url}/log.png'
     m.send_new(title='测试报告', url=url, picUrl=picUrl)
